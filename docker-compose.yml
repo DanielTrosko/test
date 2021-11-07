@@ -1,0 +1,35 @@
+version: '3'
+services:
+  db_credit:
+    image: mysql:8.0.25
+    command: [ 'mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci' ]
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'credit'
+      MYSQL_USER: 'credit'
+      MYSQL_PASSWORD: 'credit'
+      MYSQL_ROOT_PASSWORD: 'sdf_1xgfhfgsfd.sdafghf453ETG'
+    ports:
+      - '3320:3306'
+  db_customer:
+    image: mysql:8.0.25
+    command: [ 'mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci' ]
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'customer'
+      MYSQL_USER: 'customer'
+      MYSQL_PASSWORD: 'customer'
+      MYSQL_ROOT_PASSWORD: 'sdf_1xgdfg4365fggfdf453ETG'
+    ports:
+      - '3321:3306'
+  db_product:
+    image: mysql:8.0.25
+    command: [ 'mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci' ]
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'product'
+      MYSQL_USER: 'product'
+      MYSQL_PASSWORD: 'product'
+      MYSQL_ROOT_PASSWORD: 'sdf_1xgf436fgfdy56f453ETG'
+    ports:
+      - '3322:3306'
